@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 4699183504048503570}
   - component: {fileID: 8079160329790967969}
   - component: {fileID: 3678472703286920503}
+  - component: {fileID: -8823944280566880466}
+  - component: {fileID: -7625041030080986606}
+  - component: {fileID: 280124556140243432}
   m_Layer: 0
   m_Name: Queen
   m_TagString: Untagged
@@ -83,3 +86,40 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &-8823944280566880466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2825518686220933930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7b9966c89c4e1148bb17b700727741f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-7625041030080986606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2825518686220933930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6011a43fa509c0b4a88cd2194453d87c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &280124556140243432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2825518686220933930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba93e0a72299c9540b30aae7bd98b745, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  availableMoves: []
