@@ -3,17 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(PieceCreator))]
+[RequireComponent(typeof(PiecesCreator))]
 public class ChessGameController : MonoBehaviour
 {
     [SerializeField] private BoardLayout startingBoardLayout;
     [SerializeField] private Board board;
 
-    private PieceCreator pieceCreator;
+    private PiecesCreator pieceCreator;
     private ChessPlayer whitePlayer;
     private ChessPlayer blackPlayer;
     private ChessPlayer activePlayer;
-
 
     private void Awake()
     {
@@ -21,17 +20,16 @@ public class ChessGameController : MonoBehaviour
         CreatePlayers();
     }
 
+    private void SetDependencies()
+    {
+        pieceCreator = GetComponent<PiecesCreator>();
+    }
+
     private void CreatePlayers()
     {
         whitePlayer = new ChessPlayer(TeamColor.White, board);
         blackPlayer = new ChessPlayer(TeamColor.Black, board);
     }
-
-    private void SetDependencies()
-    {
-        pieceCreator = GetComponent<PieceCreator>();
-    }
-
 
     private void Start()
     {
@@ -46,11 +44,13 @@ public class ChessGameController : MonoBehaviour
         GenerateAllPossiblePlayerMoves(activePlayer);
     }
 
+
+
     private void CreatePiecesFromLayout(BoardLayout layout)
     {
         for (int i = 0; i < layout.GetPiecesCount(); i++)
         {
-            Vector2Int squareCoords = layout.GetSquareCoodsAtIndex(i);
+            Vector2Int squareCoords = layout.GetSquareCoordsAtIndex(i);
             TeamColor team = layout.GetSquareTeamColorAtIndex(i);
             string typeName = layout.GetSquarePieceNameAtIndex(i);
 
@@ -59,6 +59,8 @@ public class ChessGameController : MonoBehaviour
         }
     }
 
+
+
     private void CreatePieceAndInitialize(Vector2Int squareCoords, TeamColor team, Type type)
     {
         Piece newPiece = pieceCreator.CreatePiece(type).GetComponent<Piece>();
@@ -66,13 +68,19 @@ public class ChessGameController : MonoBehaviour
 
         Material teamMaterial = pieceCreator.GetTeamMaterial(team);
         newPiece.SetMaterial(teamMaterial);
+
+        board.SetPieceOnBoard(squareCoords, newPiece);
+
+        ChessPlayer currentPlayer = team == TeamColor.White ? whitePlayer : blackPlayer;
+        currentPlayer.AddPiece(newPiece);
     }
+
     private void GenerateAllPossiblePlayerMoves(ChessPlayer player)
     {
         player.GenerateAllPossibleMoves();
     }
 
-    internal bool IsTeamTurnActive(TeamColor team)
+    public bool IsTeamTurnActive(TeamColor team)
     {
         return activePlayer.team == team;
     }

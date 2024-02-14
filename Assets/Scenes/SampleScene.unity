@@ -402,13 +402,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.52725244, y: 0, z: 0, w: 0.84970874}
-  m_LocalPosition: {x: 0.035, y: -0.6, z: -1.88}
+  m_LocalRotation: {x: 0.42261827, y: 0, z: 0, w: 0.9063079}
+  m_LocalPosition: {x: -0.001, y: -0.6, z: -3.09}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 63.64, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 50, y: 0, z: 0}
 --- !u!1 &1137154186
 GameObject:
   m_ObjectHideFlags: 0
@@ -642,7 +642,7 @@ Transform:
   m_GameObject: {fileID: 1523024918}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.00443, y: 0.00501, z: -0.004427}
+  m_LocalPosition: {x: -0.00454, y: 0.00501, z: -0.00465}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -786,7 +786,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "we are \nat second \nvedio 13:44"
+  m_Text: "we are \nat second \nvedio 14:30"
 --- !u!222 &2139861037
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -872,10 +872,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4053044938822595250}
-  - component: {fileID: 4053044938822595252}
   - component: {fileID: 4053044938822595251}
+  - component: {fileID: 4053044938822595254}
+  - component: {fileID: 4053044938822595253}
+  - component: {fileID: 4053044938822595255}
+  - component: {fileID: 4053044938822595256}
   m_Layer: 0
-  m_Name: ChessBoard
+  m_Name: Board
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -928,8 +931,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bottomLeftSquareTransform: {fileID: 1523024919}
-  squareSize: 0.122
---- !u!65 &4053044938822595252
+  squareSize: 0.13
+--- !u!114 &4053044938822595253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3707762430802618376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c763e5e96497443aa389cad0a65212, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4053044938822595254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3707762430802618376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0a4a59522b245d408cd562bc54ec125, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &4053044938822595255
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -944,12 +971,27 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.89849454, y: 0.07633805, z: 0.8928553}
-  m_Center: {x: -0.0007355511, y: 0.07019828, z: 0.0018473268}
+  m_Size: {x: 1, y: 0, z: 1.1315641}
+  m_Center: {x: 0, y: 0.11713505, z: 0.0050600767}
+--- !u!114 &4053044938822595256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3707762430802618376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e83652be15e4c964e933dc98f683bfe7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  freeSquareMaterial: {fileID: 2100000, guid: 89313b893898d3c48a41e82614d97ee0, type: 2}
+  enemySquareMaterial: {fileID: 2100000, guid: 00f7e3f27128cdf4692555a35057b72c, type: 2}
+  selectorPrefab: {fileID: 380126216181221776, guid: fcc7954a26372a74da11ceb3308584cc, type: 3}
 --- !u!33 &7371038248006511560
 MeshFilter:
   m_ObjectHideFlags: 0

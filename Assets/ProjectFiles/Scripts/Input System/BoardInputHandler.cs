@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Board))]
 public class BoardInputHandler : MonoBehaviour, IInputHandler
 {
     private Board board;
@@ -12,9 +13,8 @@ public class BoardInputHandler : MonoBehaviour, IInputHandler
         board = GetComponent<Board>();
     }
 
-    public void ProcessInput(Vector3 inputPosition, GameObject selectObject, Action callback)
+    public void ProcessInput(Vector3 inputPosition, GameObject selectedObject, Action onClick)
     {
         board.OnSquareSelected(inputPosition);
     }
-
 }
