@@ -20,7 +20,7 @@ public class ColliderInputReciever : InputReciever
             if (Physics.Raycast(ray, out hit))
             {
                 clickPosition = hit.point;
-                Debug.Log("Hit point is " + hit.point);
+                //Debug.Log("Hit point is " + hit.point);
                 OnInputRecieved();
             }
         }
