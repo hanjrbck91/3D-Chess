@@ -1142,7 +1142,7 @@ Transform:
   m_GameObject: {fileID: 1523024918}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.004583, y: 0.00501, z: -0.004512}
+  m_LocalPosition: {x: -0.004621, y: 0.00501, z: -0.004467}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1412,7 +1412,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   freeSquareMaterial: {fileID: 2100000, guid: 89313b893898d3c48a41e82614d97ee0, type: 2}
   enemySquareMaterial: {fileID: 2100000, guid: 00f7e3f27128cdf4692555a35057b72c, type: 2}
-  selectorPrefab: {fileID: 380126216181221776, guid: fcc7954a26372a74da11ceb3308584cc, type: 3}
+  selectorPrefab: {fileID: 7058928194770156384, guid: 047bb15bad79170479cf2eec77a783a1, type: 3}
 --- !u!33 &7371038248006511560
 MeshFilter:
   m_ObjectHideFlags: 0
